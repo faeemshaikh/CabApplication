@@ -1,0 +1,20 @@
+.App{
+	margin-top: 100px;
+    margin: 0 auto;
+    text-align: left;
+    width: 600px;
+    background : #a9a9a9;
+}
+.AppContent{
+	background: #dcdcdc;
+}
+table, td, th{
+	vertical-align: top;
+}
+th{
+	text-align : center;
+}
+
+div.Request{
+	border : 1px;
+}
