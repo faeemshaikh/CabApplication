@@ -6,6 +6,7 @@ Server: Apache Tomcat 8.5
 Reference Library: MySql Connector
 
 ********************* Application flow and features *********************
+
 CustomerApp.jsp
 1. Customer can input id and location to submit cab request
 2. "AddRequest.java" servlet will be called to verify and add request
