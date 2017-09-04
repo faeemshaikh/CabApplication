@@ -20,8 +20,12 @@ public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		if(request.getParameter("did").toString().length()==0 || request.getParameter("did").toString().length()==0){
+			response.sendRedirect("DriverLogin.jsp");
+		}
 		int did =Integer.parseInt(request.getParameter("did"));
 		String pass = request.getParameter("pass");
+
 		ValidateDriver v = new ValidateDriver();
 		RequestUpdater r = new RequestUpdater();
 		ArrayList<Vector<Request>> R;

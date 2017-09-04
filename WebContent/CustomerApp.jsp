@@ -8,15 +8,39 @@
 		<title>Customer Application</title>
 	</head>
 	<body>
-	<div class="App">
-		<form method="post" action="AddRequest">
-			Customer ID:
-			<input type="text" name="cid"> <br>
-			Location:
-			<input type="text" name="lx">
-			<input type="text" name="ly"> <br>
-			<input type="submit" value="RIDE NOW">
-		</form>
+	<div class="App"><br>
+		<div class="headers">
+			<h1 align="center">Cab Application</h1>
+			<h2 align="center">Book your cab now</h2>
+		</div>
+		<div class="logindeatails">
+			<form method="post" action="AddRequest">
+				<table border="0" align="center">
+					<tbody style="background:rgb(152, 241, 157);">
+						<tr>
+							<td>
+								Customer ID
+							</td>
+							<td>
+								<input type="text" name="cid" style="width:120px;margin-left:5px;" placeholder="Enter Customet ID">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Location X <input type="text" name="lx" class="location" placeholder="LX">
+							</td>
+							<td>
+								Location Y <input type="text" name="ly" class="location" placeholder="LY">
+							</td>
+						</tr>
+						<tr style="margin-top: 5px;">
+						
+							<td colspan="2" align="center"><input type="submit" value="RIDE NOW" class="button"></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
 	</div>
 	</body>
 </html>

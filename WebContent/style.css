@@ -1,20 +1,77 @@
+body {
+  font-family: Tahoma, Geneva, sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-weight: 300;
+  line-height: 1.6em;
+  color:black;
+  background-color:#080223;
+}
 .App{
-	margin-top: 100px;
+	margin-top: 0px;
     margin: 0 auto;
-    text-align: left;
-    width: 600px;
-    background : #a9a9a9;
+    width: 60%;
+    min-height: 90vh;
+    background : rgb(152, 241, 157);
+    align: center;
+    /*font-family: Tahoma, Geneva, sans-serif;*/
 }
 .AppContent{
 	background: #dcdcdc;
+	margin: 10px;
+}
+h1{
+	text-align: center;
+	color: darkred;
 }
 table, td, th{
+	table-layout: fixed;
+	border-spacing: 0px;
 	vertical-align: top;
 }
 th{
 	text-align : center;
+	font-size : large;
+	background : lightslategrey;
 }
-
+tbody{
+	background:darkgray;
+}
 div.Request{
 	border : 1px;
+}
+.button {
+    background-color: rgb(97, 134, 48);
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.innerbutton {
+    background-color: rgb(81, 86, 75);    
+    border: none;
+    color: #c4c3e2;
+    padding: 4px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.innerdata{
+	align: center;
+	font-size: small;
+}
+.logindeatails{
+	margin:0 auto;
+	text-align: right;
+	border: 1px solid black;
+	width: max-content;
+	padding: 10px;
+	background:rgb(152, 241, 157);
+	
+}
+.location{
+	width: 25px;
 }

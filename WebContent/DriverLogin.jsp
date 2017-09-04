@@ -8,12 +8,40 @@
 <title>Driver Application Login</title>
 </head>
 <body>
-<div class="App">
-<form action="Login" method="post">
-	Enter ID: <input type="text" name="did"> <br>
-	Enter Password: <input type="password" name="pass"> <br>
-	<input type="submit" value="Login">
-</form>
-</div>
+	<div class="App" align="center"><br>
+		<div class="headers">
+			<h1>Cab Application</h1>
+			<h2>Driver Login Form</h2>
+		</div>
+		<div class="logindeatails">
+			<form action="Login" method="post">
+				<table border=0>
+					<tbody style="background:rgb(152, 241, 157);">
+						<tr style="text-align:right">
+							<td>
+								User ID: 
+							</td>
+							<td style="margin-left:5px">
+								<input type="text" name="did" placeholder="Enter Driver ID">
+							</td>
+						</tr>
+						<tr style="text-align:right">
+							<td>
+								Password: 
+							</td>
+							<td style="margin-left:5px">
+								<input type="password" name="pass"  placeholder="Enter password">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center">
+								<input type="submit" value="Login" class="button">
+							</td>
+						</tr>
+					</tbody>			
+				</table>
+			</form>	
+		</div>		
+	</div>
 </body>
 </html>

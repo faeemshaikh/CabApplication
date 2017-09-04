@@ -8,8 +8,11 @@
 <title>Request Submitted</title>
 </head>
 <body>
-<div class="App">
-	<h1 align="center">Request submitted!</h1>
+<div class="App" style="vertical-align:center"><br>
+	<form action="CustomerApp.jsp" method="post" class="logindeatails">
+		<h1 align="center">Request submitted!</h1>
+		<input type="submit" value="Book another ride" class="button">
+	</form>
 </div>
 </body>
 </html>

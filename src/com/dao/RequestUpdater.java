@@ -16,7 +16,10 @@ public class RequestUpdater {
 	ArrayList<Vector<Request>> res = new ArrayList<Vector<Request>>();
 	Vector<Request> tempvect;
 	Request tempreq;
-	String evnt = "use youplus; SET GLOBAL event_scheduler = ON; CREATE EVENT setComplete_? ON SCHEDULE AT now()+ interval 10 second DO UPDATE youplus.cabrequests set state=\"Complete\" where id=?;";
+	String q1="use youplus;";
+	String q2="SET GLOBAL event_scheduler = ON;";
+	
+	String evnt;
 	String getall = "select * from youplus.cabrequests;"; 
 	String addreq = "insert into CabRequests(cid,Lx,Ly) values(?,?,?);";
 	String waitingCount = "select count(*) from youplus.cabrequests where state like \"waiting\";";
@@ -71,10 +74,15 @@ public class RequestUpdater {
 					st.setInt(1, did);
 					st.setInt(2, id);
 					st.executeUpdate();
+					st = con.prepareStatement(q1);
+					st.executeQuery();
+					st = con.prepareStatement(q2);
+					st.executeQuery();
+					evnt = "CREATE EVENT setComplete_"+did + " ON SCHEDULE AT now()+ interval 5 minute DO UPDATE youplus.cabrequests set state=\"Complete\" where id="+id+";";
 					st = con.prepareStatement(evnt);
-					st.setInt(1, did);
-					st.setInt(2, id);
+					System.out.println(evnt);
 					st.execute();
+					System.out.println("Executed query");
 					return true;
 				}
 			}

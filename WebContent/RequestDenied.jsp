@@ -8,8 +8,11 @@
 <title>Request Denied</title>
 </head>
 <body>
-<div class="App">
-	<h4 align="center">Ride is not available :( <br> Please try again later.</h4>
+<div class="App"><br>
+	<form action="CustomerApp.jsp" method="post" class="logindeatails">
+		<h2 align="center">Ride id not available, please try later.</h2>
+		<input type="submit" value="Book Ride" class="button">
+	</form>
 </div>
 </body>
 </html>
