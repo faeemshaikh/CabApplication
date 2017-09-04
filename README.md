@@ -7,6 +7,8 @@ Reference Library: MySql Connector
 
 ********************* Application flow and features *********************
 
+#Note: Snapshots for all pages are in Snapshots folder
+
 CustomerApp.jsp
 1. Customer can input id and location to submit cab request
 2. "AddRequest.java" servlet will be called to verify and add request
