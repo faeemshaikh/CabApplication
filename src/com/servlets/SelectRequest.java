@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dao.RequestUpdater;
 import com.data.Request;
+import com.updaters.RequestUpdater;
 
 @WebServlet("/SelectRequest")
 public class SelectRequest extends HttpServlet {
@@ -24,7 +24,6 @@ public class SelectRequest extends HttpServlet {
 		int rid = Integer.parseInt(request.getParameter("rid"));
 		int did = Integer.parseInt(request.getParameter("did"));
 		RequestUpdater r = new RequestUpdater();
-		//Request currentRequest = r.getRequest(rid);
 		HttpSession session = request.getSession();
 		session.setAttribute("did", did);
 		ArrayList<Vector<Request>> R;
@@ -34,7 +33,6 @@ public class SelectRequest extends HttpServlet {
 		session.setAttribute("ongoing", R.get(1));
 		session.setAttribute("complete", R.get(2));
 		response.sendRedirect("DriverApp.jsp");
-		
 	}
 
 }

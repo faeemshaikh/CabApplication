@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dao.RequestUpdater;
-import com.dao.ValidateDriver;
 import com.data.Request;
+import com.updaters.RequestUpdater;
+import com.updaters.ValidateDriver;
 
 @WebServlet("/Login")
 public class Login extends HttpServlet {
@@ -33,7 +33,6 @@ public class Login extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("did", did);
 			R = r.updateRequests(did);
-			//System.out.println(R.size());
 			session.setAttribute("waiting", R.get(0));
 			session.setAttribute("ongoing", R.get(1));
 			session.setAttribute("complete", R.get(2));
